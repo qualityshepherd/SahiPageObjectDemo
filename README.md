@@ -13,4 +13,5 @@ The code herein are working, example Sahi tests that make use of page objects. T
 3. Run each individual test or
 4. Run the pageObjectTests.suite via bin/runPageObjectTests.bat
 
-If you have suggestions or comments, feel free to contact me.
+For more information, see my blog post:
+http://qualityshepherd.com/2013/10/using-page-objects-in-sahi-javascript/
