@@ -1,0 +1,9 @@
+/*
+	brian@qualityshepherd.com
+
+*/
+
+$BASEURL = "http://sahi.co.in/demo/training";
+
+// role array - username, password... 
+var $user = ["test", "secret"];

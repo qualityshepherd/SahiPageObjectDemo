@@ -1,0 +1,13 @@
+/*
+	brian@qualityshepherd.com
+
+*/
+_include("../config.sah");
+_include("../Pages/LoginPage.sah");
+_include("../Pages/BooksPage.sah");
+
+loginPage.loginAs($user);
+
+var $currentPageURL= booksPage.getCurrentPageURL();
+
+_assertEqual(booksPage.$url, $currentPageURL);

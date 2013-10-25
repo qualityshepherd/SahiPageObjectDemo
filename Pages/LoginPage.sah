@@ -1,0 +1,37 @@
+/*
+	brian@qualityshepherd.com
+	
+	Login Page Object... 
+*/
+_include("CommonPage.sah");
+
+function LoginPage() {
+	// properties: all accessors and data should be abstracted from tests... 
+	this.$url = $BASEURL+"/login.htm";
+ 	this.$userTextBox = _textbox("user");
+	this.$passwordBox = _password("password");
+	this.$loginButton = _submit("Login");
+
+	// helper methods... 
+    this.go = function() {
+    	_navigateTo(this.$url);
+    };
+
+    // pass in role array; helps test simplicity and readability... 
+    this.loginAs = function($roleArray) {
+		this.go();
+		this.login($roleArray[0], $roleArray[1]);
+	};
+
+	// handle login; allows manual logins... 
+	this.login = function($userName, $password) {
+		_setValue(this.$userTextBox, $userName);
+		_setValue(this.$passwordBox, $password);
+		_click(this.$loginButton);
+	}
+}
+
+// extend CommonPage... 
+LoginPage.prototype = new CommonPage();
+// instantiate the object... 
+loginPage = new LoginPage();

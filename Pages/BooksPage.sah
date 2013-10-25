@@ -1,0 +1,32 @@
+/*
+	brian@qualityshepherd.com
+	
+	Books Page Object... 
+*/
+_include("CommonPage.sah");
+
+function BooksPage() { 
+	this.$url = $BASEURL+"/books.htm";
+	this.$quantityCoreJava = _textbox("q", _near(_cell("Core Java")));
+	this.$quantityRubyForRails = _textbox("q", _near(_cell("Ruby for Rails")));
+	this.$quantityPythonCookbook = _textbox("q", _near(_cell("Python Cookbook")));
+	this.$addButton = _button("Add");
+	this.$javaCoreBookInCart = _cell("Core Java", _in(_table("added")));
+
+	this.getCostOfBook = function($bookObj) {
+		return _getText(_cell(2, _near($bookObj))).replace(/[^0-9]/g, '');
+	};
+
+	this.getGrandTotal = function() {
+		return _getText(_textbox("total"));
+	};
+
+    this.go = function() {
+    	_navigateTo(this.$url);
+    };
+}
+
+// extend... 
+BooksPage.prototype = new CommonPage();
+// instatiate... 
+booksPage = new BooksPage();

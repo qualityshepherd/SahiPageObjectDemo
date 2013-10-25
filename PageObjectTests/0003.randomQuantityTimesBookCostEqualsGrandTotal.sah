@@ -1,0 +1,20 @@
+/*
+	brian@qualityshepherd.com
+
+*/
+_include("../config.sah");
+_include("../Pages/LoginPage.sah");
+_include("../Pages/BooksPage.sah");
+
+loginPage.loginAs($user);
+
+var $randQuantity = _random(5);
+
+booksPage.setValue(booksPage.$quantityCoreJava, $randQuantity);
+booksPage.click(booksPage.$addButton);
+
+var $cost = booksPage.getCostOfBook(booksPage.$quantityCoreJava);
+var $grandTotal = booksPage.getGrandTotal();
+
+_assertEqual($cost * $randQuantity, $grandTotal);
+

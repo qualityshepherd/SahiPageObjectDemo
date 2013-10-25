@@ -1,0 +1,4 @@
+// line seperated list of tests... 
+0001.loginToDemoApp.sah
+0002.addBookToCartAndConfirmCartUpdated.sah
+0003.randomQuantityTimesBookCostEqualsGrandTotal.sah

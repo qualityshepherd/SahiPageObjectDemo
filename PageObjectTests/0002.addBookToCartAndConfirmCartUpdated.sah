@@ -1,0 +1,14 @@
+/*
+	brian@qualityshepherd.com
+
+*/
+_include("../config.sah");
+_include("../Pages/LoginPage.sah");
+_include("../Pages/BooksPage.sah");
+
+loginPage.loginAs($user);
+
+booksPage.setValue(booksPage.$quantityCoreJava, 2);
+booksPage.click(booksPage.$addButton);
+
+_assertExists(booksPage.$javaCoreBookInCart);

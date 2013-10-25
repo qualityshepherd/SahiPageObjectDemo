@@ -1,0 +1,22 @@
+/*
+	brian@qualityshepherd.com
+	
+	Base object for all page objects... 
+	Use prototype to extend in each page object...  
+*/
+
+function CommonPage() {
+	// optional wrapper for Sahi's own _click method...
+	this.click = function($object) {
+		_click($object);
+		return this;
+	};
+	
+	this.getCurrentPageURL = function() {
+		return document.location.href;
+	};
+
+	this.setValue = function($object, $value) {
+		_setValue($object, $value);
+	};
+}
