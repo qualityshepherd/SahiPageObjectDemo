@@ -2,6 +2,9 @@
 	brian [at] qualityshepherd.com
 	
 	Books Page Object... 
+	Note: for shared pages sections, like a search field or nav bar, 
+	you could make modules or page elements and extend them to pages 
+	that share them... 
 */
 _include("CommonPage.sah");
 
