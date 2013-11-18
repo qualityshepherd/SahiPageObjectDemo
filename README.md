@@ -2,7 +2,7 @@ SahiPageObjectDemo
 ==================
 
 A demonstration of my page object pattern for Sahi (Javascript)
-by Brian Ray ~ brian@qualityshepherd.com
+by Brian Ray ~ brian [at] qualityshepherd.com
 
 NOTE: This code requires Sahi v5.x or later... 
 

@@ -1,5 +1,5 @@
 /*
-	brian@qualityshepherd.com
+	brian [at] qualityshepherd.com
 	
 	Base object for all page objects... 
 	Use prototype to extend in each page object...  
